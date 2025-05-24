@@ -21,8 +21,9 @@ import java.util.List;
 @RequiredArgsConstructor
 @ToString //Transforma Objeto em String
 //@NoArgsConstructor //Sem argumentos no construtor
-@Entity //Aponta para o Sring que essa classe é uma tabela para o banco de dados
+@Entity //Aponta para o Spring que essa classe é uma tabela para o banco de dados
 @Table(name = "usuario") //Nome da Tabela, se não colocar por default vai ser o nome da classe
+@Builder
 public class Usuario implements UserDetails {
 
     @Id
@@ -65,4 +66,6 @@ public class Usuario implements UserDetails {
     public String getUsername() {
         return email;
     }
+
+
 }
